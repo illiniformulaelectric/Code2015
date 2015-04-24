@@ -1,7 +1,43 @@
 #include <LiquidCrystal.h>
 #include <Wire.h>
 
+
+
+
+
+/*        I/O to Arduino Pin:
+
+Input
+
+Hall Effect Speed Sensor:      Pin 34        (http://www.race-technology.com/wheel_speed_2_61.html, supply 12 to 24 VDC, output 5 V?)
+BMSL:                          Pin 45        (fault signal 0 or 5)
+BMSR:                          Pin 46        (fault signal 0 or 5)
+Ignition Switch                Pin 47        (momentary switch signal 0 or 5)
+Precharge Done Signal          Pin 26        (signal 0 or 5 V)
+
+Brake Pedal Input:             A2            (?????)
+BMSL Charge                    A0            (0 to 5 V analog)
+BMSR Charge                    A1            (0 to 5 V analog)
+
+(Throttle Rotary Pot 1 in?)
+(Throttle Rotary Pot 2 in?)
+
+Output
+Buzzer Signal                  Pin 10
+Ignition Light Control         Pin 29        
+IMD Fault LED                  Pin 23
+BMSL Fault LED                 Pin 24
+BMSR Fault LED                 Pin 25
+
+
+
+(Throttle out??)
+
+(OR Forward Switch)
+*/
+
 /*
+
 LCD WIRING INFO:
 	If any wiring is changed on the Arduino Board, the pins in the displayLCD call 
 	MUST BE CHANGED
@@ -12,8 +48,10 @@ LCD WIRING INFO:
 	LCD D6: 	| Pin 3
 	LCD D5: 	| Pin 4
 	LCD D4: 	| Pin 5
-	LCD ENABLE: | Pin 11
-	LCD RS :    | Pin 12
+	LCD ENABLE      | Pin 11
+	LCD RS          | Pin 12
+
+                
 */
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
